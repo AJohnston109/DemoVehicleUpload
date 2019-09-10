@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="03febcbe-0190-4427-80a0-11f0ceef666d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://hosted2.nditech.com:8080/bof2/services/inputcapturewebservice" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InputCaptureWebService.disco" MetadataType="Disco" ID="af2f44f7-b976-40f0-a75b-817288bd1d82" SourceId="1" SourceUrl="http://testvisce1:8080/bof2/services/InputCaptureWebService?disco" />
+    <MetadataFile FileName="InputCaptureWebService.wsdl" MetadataType="Wsdl" ID="aff880aa-1ff4-4524-beb4-086a958a74c5" SourceId="1" SourceUrl="http://testvisce1:8080/bof2/services/InputCaptureWebService?wsdl=wsdl0" />
+    <MetadataFile FileName="InputCaptureWebService1.wsdl" MetadataType="Wsdl" ID="b38960f0-97c2-41d6-b331-d9c70ea48df4" SourceId="1" SourceUrl="http://testvisce1:8080/bof2/services/InputCaptureWebService?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

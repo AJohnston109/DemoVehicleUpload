@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://172.31.255.113:8080/bof2/services/InputCaptureWebService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://172.31.255.113:8080/bof2/services/InputCaptureWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://172.31.255.113:8080/bof2/services/InputCaptureWebService/Imports">
+      <xsd:import namespace="http://www.w3.org/2001/XMLSchema" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="sendCaptureRequest">
+    <wsdl:part name="signatureOfSender" type="xsd:string" />
+    <wsdl:part name="username" type="xsd:string" />
+    <wsdl:part name="vrm" type="xsd:string" />
+    <wsdl:part name="feedIdentifier" type="xsd:short" />
+    <wsdl:part name="sourceIdentifier" type="xsd:short" />
+    <wsdl:part name="cameraIdentifier" type="xsd:short" />
+    <wsdl:part name="plateJpegImage" type="xsd:base64Binary" />
+    <wsdl:part name="overviewJpegImage" type="xsd:base64Binary" />
+    <wsdl:part name="captureTime" type="xsd:dateTime" />
+    <wsdl:part name="latitude" type="xsd:float" />
+    <wsdl:part name="longitude" type="xsd:float" />
+    <wsdl:part name="cameraPresetPosition" type="xsd:short" />
+    <wsdl:part name="cameraPan" type="xsd:string" />
+    <wsdl:part name="cameraTilt" type="xsd:string" />
+    <wsdl:part name="cameraZoom" type="xsd:string" />
+    <wsdl:part name="confidencePercentage" type="xsd:byte" />
+    <wsdl:part name="motionTowardCamera" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="sendCaptureResponse">
+    <wsdl:part name="sendCaptureReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="InputCaptureWebService">
+    <wsdl:operation name="sendCapture">
+      <wsdl:input wsam:Action="http://input.webservices.bof2.anite.com/InputCaptureWebService" name="sendCaptureRequest" message="tns:sendCaptureRequest" />
+      <wsdl:output wsam:Action="http://172.31.255.113:8080/bof2/services/InputCaptureWebService/InputCaptureWebService/sendCaptureResponse" name="sendCaptureResponse" message="tns:sendCaptureResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
